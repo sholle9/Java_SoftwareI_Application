@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartFormController">
+   <children>
+      <VBox layoutX="50.0" prefHeight="400.0" prefWidth="500.0">
+         <children>
+            <GridPane prefHeight="240.0" prefWidth="416.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="128.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="0.0" prefWidth="52.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="133.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Modify Part" />
+                  <Label text="ID" GridPane.rowIndex="2" />
+                  <Label text="Name" GridPane.rowIndex="3" />
+                  <Label text="Inv" GridPane.rowIndex="4" />
+                  <Label text="Price/Cost" GridPane.rowIndex="5" />
+                  <Label text="Max" GridPane.rowIndex="6" />
+                  <Label fx:id="ModifyPartMachineIdLbl" text="Machine ID" GridPane.rowIndex="7" />
+                  <RadioButton fx:id="ModifyPartInHouseRtBtn" mnemonicParsing="false" onAction="#onActionModifyInHouse" text="In-House" GridPane.columnIndex="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="ModifyPartTG" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="ModifyPartOutsourcedRtBtn" mnemonicParsing="false" onAction="#onActionModifyOutsourced" text="Outsourced" toggleGroup="$ModifyPartTG" GridPane.columnIndex="3" />
+                  <Label text="Min" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="ModifyPartIDTxt" editable="false" promptText="Auto-Generates ID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="ModifyPartNameTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="ModifyPartInvTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="ModifyPartPriceTxt" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="ModifyPartMaxTxt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="ModifyPartMachineIDTxt" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="ModifyPartMinTxt" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="30.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="ModifyPartSaveBtn" mnemonicParsing="false" onAction="#onActionModifyPartSave" text="Save" />
+                  <Button fx:id="ModifyPartCancelBtn" mnemonicParsing="false" onAction="#onActionModifyPartCancel" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin></HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>
